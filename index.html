@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./files/css/index.css">
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                screens: {
+                    'mobile-s1': '460px',
+                    'mobile-s4': '370px',
+                    'mobile-s2': '400px',
+                    'mobile-s3': '500px',
+                    'tab-s1': '800px',
+
+                    'bigScreen': '1200px',
+                },
+                colors: {
+                    blackColor: '#0D0D0D',
+                    whiteColor: '#fff',
+                    blueColor: '#3944F7',
+                    lightBlackColor: '#212121',
+                    grayColor: '#2b2b2b'
+                },
+                fontFamily: {
+                    poppins: ['Poppins']
+                }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-blackColor">
+    <div class="h-[100vh] flex">
+        <div class="w-[3rem] h-[100vh] flex flex-col items-center mobile-s1:relative mobile-s1:w-[10%] border-lightBlackColor border-r-[0.1rem]">
+            <div class="h-[25%]">
+                <img src="./files/images/playstation-logo.png" alt="playstation-logo" class="w-[2rem] py-[2rem] sepia-0 invert mobile-s1:w-[2.5rem]">
+            </div>
+
+            <div>
+                <ul class="text-whiteColor text-[1rem] grid gap-2 mobile-s1:text-[1.5rem]">
+                    <li class="hover:bg-blueColor cursor-pointer px-[1rem] py-[0.7rem] ease-in duration-300 rounded-[0.8rem]"><i class="fa-solid fa-house"></i></li>
+                    <li class="hover:bg-blueColor cursor-pointer px-[1rem] py-[0.7rem] ease-in duration-300 rounded-[0.8rem] mobile-s1:text-[1.8rem]"><i class="fa-solid fa-bag-shopping"></i></li>
+                    <li class="hover:bg-blueColor cursor-pointer px-[1rem] py-[0.7rem] ease-in duration-300 rounded-[0.8rem]"><i class="fa-solid fa-gamepad"></i></li>
+                    <li class="hover:bg-blueColor cursor-pointer px-[1rem] py-[0.7rem] ease-in duration-300 rounded-[0.8rem] mobile-s1:text-[1.8rem]"><i class="fa-solid fa-gear"></i></li>
+                    <li class="hover:bg-blueColor cursor-pointer px-[1rem] py-[0.7rem] ease-in duration-300 rounded-[0.8rem] mobile-s1:text-[1.8rem]"><i class="fa-solid fa-chart-simple"></i></li>
+                    <li class="hover:bg-blueColor cursor-pointer px-[1rem] py-[0.7rem] ease-in duration-300 rounded-[0.8rem]"><i class="fa-solid fa-user-group"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w-[90%] overflow-y-scroll scrollBar">
+            <div class="w-[100%] h-[10%] flex justify-between items-center text-whiteColor px-[0.3rem] mobile-s1:h-[15%] tab-s1:px-[4rem]">
+                <div class="w-[50%] px-[0.5rem] py-[0.4rem] bg-lightBlackColor rounded-[1rem] mobile-s1:py-[0.8rem] mobile-s1:w-[50%]">
+                    <i class="fa-solid fa-magnifying-glass text-grayColor mobile-s1:mx-[0.3rem]"></i>
+                    <input type="text" name="search" class="w-[80%] bg-transparent focus:outline-none mobile-s1:w-[80%]" placeholder="search">
+                </div>
+
+                <div>
+                    <ul class="grid grid-cols-3 gap-1 items-center mobile-s1:text-[1.2rem] mobile-s1:gap-4"> 
+                        <li class="cursor-pointer mobile-s1:bg-lightBlackColor mobile-s1:px-[1.2rem] mobile-s1:py-[0.8rem] rounded-full"><i class="fa-regular fa-bell"></i></li>
+                        <li class="cursor-pointer mobile-s1:bg-lightBlackColor mobile-s1:px-[1.2rem] mobile-s1:py-[0.8rem] rounded-full"><i class="fa-solid fa-bag-shopping"></i></li>
+                        <li class="cursor-pointer"><img src="./files/images/istockphoto-1284693553-612x612.jpg" alt="user-image" class="w-[2rem] mobile-s1:w-[3.5rem] rounded-full"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="px-[0.4rem]  font-poppins text-whiteColor tab-s1:px-[4rem]">
+                <div class="slider flex w-[100%] h-[30vh] mobile-s1:h-[60vh] tab-s1:h-[70vh] overflow-hidden">
+                    <div class="active relative slider-div">
+                        <img src="./files/images/top25modernpcgames-blogroll-1663951042311.jpg" alt="gaming-slider" class="bg-no-repeat bg-cover w-[100%] mobile-s1:h-[100%] h-[100%] rounded-[0.6rem] mobile-s1:w-[100rem] opacity-[0.5] mobile-s2:w-[140rem]">
+                        <div class="absolute top-[30%] left-[50%] translate-x-[-50%] text-center">
+                            <h2 class="headingTag font-bold text-[0.7rem] mobile-s1:text-[2rem] tab-s1:text-[3rem]">Mini Craft</h2>
+                            <p class="text-[0.6rem] mobile-s1:text-[1rem] tab-s1:text-[1.5rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, at.</p>
+                            <button class="text-[0.6rem] bg-blackColor text-whiteColor px-[0.8rem] py-[0.4rem] rounded-[0.4rem] cursor-pointer mobile-s1:text-[1rem] mobile-s1:my-[1.5rem] mobile-s1:py-[1rem] mobile-s1:px-[2rem]">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-[.3rem] my-[1rem] tab-s1:mx-[4rem]">
+                <div class="text-white flex justify-between items-center">
+                    <h3 class="text-[0.7rem] tab-s1:text-[1.2rem] text-bold">Most Played Game</h3>
+                    <ul class="progress-Bars flex"></ul>
+                </div>
+            </div>
+
+            <div class="top-container flex overflow-hidden relative tab-s1:px-[4rem] w-[100%] mb-[1rem]">
+                <div class="absolute left-[0.6rem] top-[50%] translate-y-[-50%] z-50 tab-s1:top-[40%]">
+                    <button class="leftHandler bg-white p-1 text-black rounded-full"><i class="fa-solid fa-angle-left"></i></button>
+                </div>
+
+                <div class="cards-container w-[100%] h-[40vh] tab-s1:h-[70vh]">
+                    <!-- <div class="cards text-black bg-white text-center rounded-lg">
+                        <img src="./files/images/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg" alt="games image" class="image_element p-[.2rem] rounded-md">
+                        <h3 class="headingTag text-[.8rem] mt-[.2rem] mb-[.2rem]">Battle Field 2044</h3>
+                        <ul class="flex justify-center text-[.8rem] mt-[.2rem] mb-[.2rem]">
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                        </ul>
+                        <button class="bg-black text-white px-[0.7rem] py-[.3rem] rounded-lg mt-[0.8rem] mb-[0.2rem]">order</button>
+                    </div> -->
+                </div>
+                
+                <div class="absolute right-[0.6rem] top-[50%] translate-y-[-50%] z-50 tab-s1:top-[40%]">
+                    <button class="rightHandler bg-white p-1 text-black rounded-full"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./files/js/app.js"></script>
+</body>
+</html>
